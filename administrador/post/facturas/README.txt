@@ -1,0 +1,1 @@
+En este directorio se descargan temporalmente las facturas antes de ser enviadas mediante el API al microservicio CORE
