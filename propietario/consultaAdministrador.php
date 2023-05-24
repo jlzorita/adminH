@@ -66,7 +66,7 @@ if($mensajeNoContestado != null){
             </tr>
             <tr>                
                 <td style="font-size:10pt;border-right:1px black solid;text-align:right;
-                padding:0px 10px;font-weight:bold" > 
+                padding:0px 10px;font-weight:bold;border-bottom:1px black solid;" > 
                     <?php 
                         echo substr($mensajeNoContestado[0]["fechaM"],8,2);
                         echo "/";
@@ -115,7 +115,7 @@ if(!$mensajes != null){
         </tr>
         <tr>                
             <td style="font-size:10pt;border-right:1px black solid;text-align:right;
-            padding:0px 10px;font-weight:bold" > 
+            padding:0px 10px;font-weight:bold;border-bottom:1px black solid;" > 
                 <?php 
                     echo substr($mensaje["fechaM"],8,2);
                     echo "/";
@@ -140,7 +140,7 @@ if(!$mensajes != null){
         </tr>
         <tr>                
             <td style="font-size:10pt;border-right:1px black solid;text-align:right;
-            padding:0px 10px;font-weight:bold" > 
+            padding:0px 10px;font-weight:bold;border-bottom:1px black solid;" > 
                 <?php 
                     echo substr($mensaje["fechaR"],8,2);
                     echo "/";

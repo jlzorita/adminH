@@ -19,7 +19,7 @@
                 document.getElementById("retorno").style.color = "red";
                 document.getElementById("retorno").style.fontWeight = "bold";
 
-                if(respuesta == "noNombre"){                                
+                if(respuesta == "noNombre"){                         
                     document.getElementById("retorno").innerHTML = "Introduce un nombre de usuario.";
                 }else if(respuesta == "noPassword"){
                     document.getElementById("retorno").innerHTML = "Introduce una contraseña.";

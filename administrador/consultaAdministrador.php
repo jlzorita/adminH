@@ -69,9 +69,10 @@ if($mensajes == null){
                     <td style="border:1px black solid;width:120px;text-align:center;background-color:#BDBDBD"> 
                         <b>Respuesta</b>
                     </td>
-                    <td style="padding:0px 0px;border:1px black solid;font-weight:bold;border:white 0px solid;" > 
+                    <td style="padding:0px 0px;
+                    font-weight:bold;border:black 1px solid;" > 
                         <form onsubmit="enviarRespuesta(<?php echo $mensaje['id']; ?>); return false" id="form<?php echo $mensaje['id'];?>">
-                        <textarea style="width:468px;height:120px;resize:none" name="respuesta" id="respuesta<?php echo $mensaje['id'];?>">Respuesta ...</textarea>
+                        <textarea style="width:468px;height:120px;resize:none;border:0px white solid" name="respuesta" id="respuesta<?php echo $mensaje['id'];?>">Respuesta ...</textarea>
                         <input type="hidden" name="clienteId" value="<?php echo $mensaje['cliente']['id']; ?>">
                     </td>                    
                 </tr>                
