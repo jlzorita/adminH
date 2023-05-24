@@ -134,7 +134,7 @@ function generarFactura(){
         url: 'post/generarFactura.php',
         data: $('#form1').serialize(),
                         
-        success: function(respuesta) {            
+        success: function(respuesta) {
             document.getElementById("retorno").style.color = "red";
             document.getElementById("retorno").style.fontWeight = "bold";
             if(respuesta == "1"){
