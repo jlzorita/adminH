@@ -29,6 +29,8 @@ function detalleFactura(id){
 
 
 function reparto(entidades){
+    
+
     total = document.getElementById("importe").value;
     coeficiente = document.getElementById("coeficiente").value;
 
@@ -37,7 +39,7 @@ function reparto(entidades){
             document.getElementById("importe"+i).value = (total/entidades);
         if(coeficiente == 1)
             document.getElementById("importe"+i).value = document.getElementById("coef"+i).value /100 * total;
-    }    
+    }
 }
 
 function nuevaFactura(){    

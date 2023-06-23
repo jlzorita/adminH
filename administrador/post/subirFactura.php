@@ -1,6 +1,7 @@
 <?php
   require("../../config.php");
   include("../gets.php");
+  $sesionId = session_id();
 
   $id = $_POST["id"];
   $file = $_FILES["file"];
@@ -12,7 +13,7 @@
   move_uploaded_file($_FILES["file"]["tmp_name"], $dir.$file["name"]);
 
   //Realizar POST subir fichero
-  $url = "http://$GLOBALS[host]:$GLOBALS[puertoCore]/factura/subir";
+  $url = "http://$GLOBALS[host]:$GLOBALS[puertoCore]/factura/subir?sesion=$sesionId";
 
 
     $post = array('file' => new CurlFile($dir.$file["name"], 'application/pdf', $id), 'id' => $id);
@@ -30,7 +31,7 @@
 
     curl_close($curl);
 
-    $ver = "<a href=\"http://$GLOBALS[exHost]:$GLOBALS[puertoCore]/factura/ver/$id.pdf\">";
+    $ver = "<a href=\"http://$GLOBALS[exHost]:$GLOBALS[puertoCore]/factura/ver/$id.pdf?sesion=$sesionId&comunidadId=$_SESSION[comunidadId]\">";
     $ver = $ver."<img style=\"width:45px\" src=\"../imagenes/pdf.png\"/></a>";
 
     echo $ver;

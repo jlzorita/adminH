@@ -86,15 +86,13 @@ input[type=button]:hover{
         <?php
             if($factura["pdf"]){
                 ?>
-                    <a href="http://<?= $GLOBALS['exHost'];?>:<?= $GLOBALS['puertoCore'];?>/factura/ver/<?php echo $factura['id'];?>.pdf">
+                    <a href="http://<?= $GLOBALS['exHost'];?>:<?= $GLOBALS['puertoCore'];?>/factura/ver/<?php echo $factura['id'];?>.pdf?sesion=<?php echo session_id(); ?>&comunidadId=<?php echo $_SESSION["comunidadId"]; ?>">
                     <img style="width:45px" src="../imagenes/pdf.png"/> 
                     </a>                    
         </div>
                 </td>
                <?php
             }else{
-
-
                 //action="post/subirFactura.php"
                 ?>                
                     <form onsubmit="subirFactura(); return false" id="formFile" enctype="multipart/form-data" method="post" >

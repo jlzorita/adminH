@@ -42,18 +42,21 @@ include("gets.php");
 
 <?php
 
+$i = 1;
 foreach(getEntidadesComunidad() as $entidad){
+    
     ?>
         <p>
         <label><b><?php echo $entidad["nombre"];?></b></label>
-        <input type="text" name="coef<?php echo $entidad["id"];?>" id="coef<?php echo $entidad["id"];?>" 
+        <input type="text" name="coef<?php echo $entidad["id"];?>" id="coef<?php echo $i;?>" 
             style="height:16px;width:80px;text-align:right;background-color:#FFDD97"
             value="<?php echo $entidad["coeficiente"];?>" disabled>
-        <input type="number" name="importe<?php echo $entidad["id"];?>" id="importe<?php echo $entidad["id"];?>"
+        <input type="number" name="importe<?php echo $entidad["id"];?>" id="importe<?php echo $i;?>"
         style="height:16px;width:134px;text-align:right;" step="any">
         
         </p>
     <?php
+    $i++;
 }
 ?>
     <p>
