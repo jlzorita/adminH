@@ -95,7 +95,7 @@ if($facturas == null){
             <?php
             if($factura["pdf"]){
                 ?>
-                    <a href="http://<?= $GLOBALS['exHost'];?>:<?= $GLOBALS['puertoCore'];?>/factura/ver/<?php echo $factura['id'];?>.pdf">
+                    <a href="http://<?= $GLOBALS['exHost'];?>:<?= $GLOBALS['puertoCore'];?>/factura/ver/<?php echo $factura['id'];?>.pdf?sesion=<?php echo session_id(); ?>&comunidadId=<?php echo $_SESSION["comunidadId"]; ?>">                    
                     <img style="width:35px" src="../imagenes/pdf.png"/> 
                     </a>                    
 
